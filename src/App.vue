@@ -4,25 +4,25 @@
   >
     <div class="flex-1 mr-5 bg-opacity-50 bg-slate-800 p-3 flex flex-col">
       <!-- 横向柱状图 -->
-      <HorizontalBar></HorizontalBar>
+      <HorizontalBar class="h-1/3 box-border pb-4"></HorizontalBar>
       <!-- 雷达图 -->
-      <RadarBar></RadarBar>
+      <RadarBar class="h-1/3 box-border pb-4"></RadarBar>
       <!-- 关系图 -->
-      <Relation></Relation>
+      <Relation class="h-1/3"></Relation>
     </div>
     <div class="w-1/2 mr-5 flex flex-col">
       <!-- 数据总览图 -->
-      <TotalData></TotalData>
+      <TotalData class="bg-opacity-50 bg-slate-800 p-3"></TotalData>
       <!-- 地图可视化 -->
-      <MapChart></MapChart>
+      <MapChart class="bg-opacity-50 bg-slate-800 p-3 mt-4 flex-1"></MapChart>
     </div>
     <div class="flex-1 bg-opacity-50 bg-slate-800 p-3 flex flex-col">
       <!-- 竖向柱状图 -->
-      <VerticalBar></VerticalBar>
+      <VerticalBar class="h-1/3 box-border pb-4"></VerticalBar>
       <!-- 环形图 -->
-      <RingBar></RingBar>
+      <RingBar class="h-1/3 box-border pb-4"></RingBar>
       <!-- 文档云图 -->
-      <WordCloud></WordCloud>
+      <WordCloud class="h-1/3"></WordCloud>
     </div>
   </div>
 </template>
