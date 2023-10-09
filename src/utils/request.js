@@ -1,11 +1,11 @@
 import axios from "axios";
 
-let _env = import.meta.env
-// 开发环境走代理，生产环境走服务端
-let url = _env.MODE == 'development'?_env.VITE_APP_BASE_API:_env.VITE_HOST_URL
+// let _env = import.meta.env
+// // 开发环境走代理，生产环境走服务端
+// let url = _env.MODE == 'development'?_env.VITE_APP_BASE_API:_env.VITE_HOST_URL
 
 const service = axios.create({
-  baseURL:url,
+  baseURL:'https://api.imooc-web.lgdsunday.club/api',
   timeout:5000,
 })
 
