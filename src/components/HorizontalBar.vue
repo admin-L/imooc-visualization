@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import * as echarts from 'echarts'
 const props = defineProps({
   data: {
@@ -26,7 +26,7 @@ onMounted(() => {
 
 //构建 option 配置对象
 const renderChart = () => {
-  const options = {
+  const option = {
     // X 轴数据
     xAxis: {
       show: false,
@@ -60,13 +60,39 @@ const renderChart = () => {
     },
     series: [
       {
-        type: 'bar'
+        type: 'bar',
+        data: props.data.regions.map(item => ({
+          name: item.name,
+          value: item.value
+        })),
+        showBackground: true,
+        backgroundStyle: {
+          color: 'rgba(180, 180, 180, 0.2)'
+        },
+        itemStyle: {
+          color: '#4d9ad3',
+          barBorderRadius: 5,
+          shadowColor: 'rgba(0, 0, 0, 0.3)',
+          shadowBlur: 5
+        },
+        barWidth: 12,
+        label: {
+          show: true,
+          position: 'right',
+          textStyle: {
+            color: '#ffffff'
+          }
+        }
       }
     ]
   }
-  myChart.setOption(options)
+  //通过setOption(option) 绑定实例
+  myChart.setOption(option)
 }
-//通过setOption(option) 绑定实例
+
+watch(() => props.data, () => {
+  renderChart()
+})
 </script>
 
 <style>

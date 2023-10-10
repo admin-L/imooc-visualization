@@ -19,7 +19,7 @@
     </div>
     <div class="flex flex-col flex-1 p-3 bg-opacity-50 bg-slate-800">
       <!-- 竖向柱状图 -->
-      <VerticalBar class="box-border pb-4 h-1/3"></VerticalBar>
+      <VerticalBar class="box-border pb-4 h-1/3" :data="data.serverData"></VerticalBar>
       <!-- 环形图 -->
       <RingBar class="box-border pb-4 h-1/3"></RingBar>
       <!-- 文档云图 -->
@@ -45,11 +45,11 @@ import { getVisualization } from './api/visualization.js'
 const data = ref(null)
 const loadData = async () => {
   data.value = await getVisualization()
-  console.log(data.value)
+  // console.log(data.value)
 }
-// setInterval(() => {
+setInterval(() => {
   loadData()
-// }, 3000)
+}, 3000)
 </script>
 
 <style>
