@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>大区数据信息</div>
+    <div>【大区数据信息】</div>
     <div ref="target" class="w-full h-full"></div>
   </div>
 </template>
@@ -14,7 +14,6 @@ const props = defineProps({
     required: true
   }
 })
-console.log(props)
 
 //初始化 echarts 实例
 let myChart = null

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>服务资源占用比</div>
+    <div>【服务资源占用比】</div>
     <div ref="target" class="w-full h-full"></div>
   </div>
 </template>
@@ -14,7 +14,6 @@ const props = defineProps({
     required: true
   }
 })
-console.log(props.data)
 
 let myChart = null
 const target = ref(null)
