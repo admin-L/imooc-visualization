@@ -7,7 +7,7 @@
       <!-- 横向柱状图 -->
       <HorizontalBar class="box-border pb-4 h-1/3" :data="data.regionData"></HorizontalBar>
       <!-- 雷达图 -->
-      <RadarBar class="box-border pb-4 h-1/3"></RadarBar>
+      <RadarBar class="box-border pb-4 h-1/3" :data="data.riskData"></RadarBar>
       <!-- 关系图 -->
       <Relation class="h-1/3"></Relation>
     </div>
@@ -21,7 +21,7 @@
       <!-- 竖向柱状图 -->
       <VerticalBar class="box-border pb-4 h-1/3" :data="data.serverData"></VerticalBar>
       <!-- 环形图 -->
-      <RingBar class="box-border pb-4 h-1/3"></RingBar>
+      <RingBar class="box-border pb-4 h-1/3" :data="data.abnormalData"></RingBar>
       <!-- 文档云图 -->
       <WordCloud class="h-1/3"></WordCloud>
     </div>
